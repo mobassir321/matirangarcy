@@ -1,16 +1,16 @@
-// Youth Red Crescent Matiranga Website
-
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Website Loaded Successfully");
+    console.log("Youth Red Crescent Matiranga Website Loaded Successfully!");
 
-    const hero = document.querySelector(".hero");
+    const cards = document.querySelectorAll(".card");
 
-    if(hero){
-        hero.style.opacity = "0";
+    cards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
 
         setTimeout(() => {
-            hero.style.transition = "1s";
-            hero.style.opacity = "1";
-        }, 300);
-    }
+            card.style.transition = "all 0.6s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, index * 200);
+    });
 });
