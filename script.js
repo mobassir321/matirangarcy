@@ -14,3 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }, index * 200);
     });
 });
+const images = [
+  "images/photo1.jpg",
+  "images/photo2.jpg",
+  "images/photo3.jpg",
+  "images/photo4.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % images.length;
+  document.getElementById("slider").src = images[current];
+}, 3000);
