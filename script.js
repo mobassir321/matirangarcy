@@ -15,10 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 const images = [
-  "images/photo1.jpg",
-  "images/photo2.jpg",
-  "images/photo3.jpg",
-  "images/photo4.jpg"
+    IMG-20260710-WA0165.jpg,
+    IMG-20260710-WA0113.jpg,
+IMG-20260707-WA0043.jpg,
+IMG-20260707-WA0041.jpg,
+IMG-20260707-WA0022.jpg,
+IMG-20260707-WA0005.jpg,
+IMG-20260707-WA0004.jpg,
 ];
 
 let current = 0;
