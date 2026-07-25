@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     console.log("Youth Red Crescent Matiranga Website Loaded Successfully!");
 
+    // Card Animation
     const cards = document.querySelectorAll(".card");
 
     cards.forEach((card, index) => {
@@ -13,20 +15,26 @@ document.addEventListener("DOMContentLoaded", function () {
             card.style.transform = "translateY(0)";
         }, index * 200);
     });
+
+    // Image Slider
+    const images = [
+        "images/IMG-20260710-WA0165.jpg",
+        "images/IMG-20260710-WA0113.jpg",
+        "images/IMG-20260707-WA0043.jpg",
+        "images/IMG-20260707-WA0041.jpg",
+        "images/IMG-20260707-WA0022.jpg",
+        "images/IMG-20260707-WA0005.jpg",
+        "images/IMG-20260707-WA0004.jpg"
+    ];
+
+    let current = 0;
+    const slider = document.getElementById("slider");
+
+    if (slider) {
+        setInterval(() => {
+            current = (current + 1) % images.length;
+            slider.src = images[current];
+        }, 3000);
+    }
+
 });
-const images = [
-    IMG-20260710-WA0165.jpg,
-    IMG-20260710-WA0113.jpg,
-IMG-20260707-WA0043.jpg,
-IMG-20260707-WA0041.jpg,
-IMG-20260707-WA0022.jpg,
-IMG-20260707-WA0005.jpg,
-IMG-20260707-WA0004.jpg,
-];
-
-let current = 0;
-
-setInterval(() => {
-  current = (current + 1) % images.length;
-  document.getElementById("slider").src = images[current];
-}, 3000);
