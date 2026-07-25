@@ -5,16 +5,17 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f5f5f5;
     color:#333;
+    line-height:1.6;
 }
 
 header{
-    background:#c40000;
+    background:#c8102e;
     color:#fff;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
 
 header h1{
@@ -23,7 +24,6 @@ header h1{
 
 header p{
     margin-top:8px;
-    font-size:18px;
 }
 
 nav{
@@ -37,76 +37,70 @@ nav{
 }
 
 nav a{
-    color:#c40000;
     text-decoration:none;
+    color:#c8102e;
     font-weight:bold;
-    transition:.3s;
+    padding:10px 15px;
+    border-radius:6px;
 }
 
 nav a:hover{
-    color:#000;
+    background:#c8102e;
+    color:#fff;
 }
 
 .hero{
-    background:#c40000;
-    color:#fff;
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
     text-align:center;
-    padding:80px 20px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.hero img{
+    width:100%;
+    border-radius:10px;
 }
 
 .hero h2{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:20px;
+    margin-top:20px;
+    color:#c8102e;
 }
 
 .btn{
     display:inline-block;
-    background:#fff;
-    color:#c40000;
-    padding:12px 25px;
-    border-radius:8px;
+    margin:10px;
+    padding:12px 20px;
+    background:#c8102e;
+    color:white;
     text-decoration:none;
-    font-weight:bold;
+    border-radius:6px;
 }
 
 .btn:hover{
-    background:#eee;
+    background:#90001f;
 }
 
 .container{
     width:90%;
     max-width:1100px;
     margin:auto;
-    padding:40px 0;
 }
 
 .card{
     background:#fff;
-    border-radius:12px;
+    margin:20px 0;
     padding:20px;
-    margin-bottom:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .card h2{
-    color:#c40000;
+    color:#c8102e;
     margin-bottom:10px;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.gallery img{
-    width:100%;
-    border-radius:10px;
 }
 
 footer{
@@ -117,22 +111,29 @@ footer{
     margin-top:30px;
 }
 
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
 @media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
 
 header h1{
 font-size:24px;
 }
 
 .hero h2{
-font-size:28px;
+font-size:24px;
 }
 
-.hero p{
-font-size:16px;
 }
-
-nav{
-flex-direction:column;
-}
-
-  }
