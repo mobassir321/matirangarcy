@@ -277,3 +277,24 @@ footer hr{
 margin:20px 0;
 border:1px solid rgba(255,255,255,.2);
 }
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+    }
