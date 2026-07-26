@@ -17,15 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Image Slider
+    
     const images = [
-        "images/IMG-20260710-WA0165.jpg",
-        "images/IMG-20260710-WA0113.jpg",
-        "images/IMG-20260707-WA0043.jpg",
-        "images/IMG-20260707-WA0041.jpg",
-        "images/IMG-20260707-WA0022.jpg",
-        "images/IMG-20260707-WA0005.jpg",
-        "images/IMG-20260707-WA0004.jpg"
-    ];
+    "images/IMG-20260710-WA0165.jpg",
+    "images/IMG-20260710-WA0113.jpg",
+    "images/IMG-20260707-WA0043.jpg",
+    "images/IMG-20260707-WA0041.jpg",
+    "images/IMG-20260707-WA0024.jpg",
+    "images/IMG-20260707-WA0023.jpg",
+    "images/IMG-20260707-WA0022.jpg",
+    "images/IMG-20260707-WA0008.jpg",
+    "images/IMG-20260707-WA0005.jpg",
+    "images/IMG-20260707-WA0004.jpg"
+];
 
     let current = 0;
     const slider = document.getElementById("slider");
