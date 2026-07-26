@@ -300,8 +300,15 @@ footer hr{
 }
 
 nav{
-    flex-direction:column;
-    align-items:center;
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding:10px;
+}
+
+nav a{
+    flex:0 0 auto;
 }
 
 .slider img{
