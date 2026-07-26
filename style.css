@@ -1,352 +1,28 @@
+/* ===========================
+   Youth Red Crescent Website
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-body{
-background:#f5f5f5;
-color:#333;
-line-height:1.6;
-}
-
-header{
-background:#d6001c;
-color:#fff;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-font-size:32px;
-}
-
-header p{
-font-size:18px;
-margin-top:5px;
-}
-
-nav{
-background:#fff;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-padding:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-nav a{
-text-decoration:none;
-color:#d6001c;
-padding:10px 18px;
-font-weight:bold;
-border-radius:6px;
-margin:5px;
-transition:.3s;
-}
-
-nav a:hover{
-background:#d6001c;
-color:#fff;
-}
-
-.hero{
-width:90%;
-max-width:1100px;
-margin:20px auto;
-background:#fff;
-padding:20px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-.hero img{
-width:100%;
-max-height:420px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.hero h2{
-margin-top:20px;
-color:#d6001c;
-}
-
-.btn{
-display:inline-block;
-background:#d6001c;
-color:#fff;
-padding:12px 20px;
-margin:10px;
-text-decoration:none;
-border-radius:8px;
-}
-
-.btn:hover{
-background:#a40015;
-}
-
-.container{
-width:90%;
-max-width:1100px;
-margin:20px auto;
-}
-
-.card{
-background:#fff;
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-.card h2{
-color:#d6001c;
-margin-bottom:15px;
-}
-
-.card ul{
-padding-left:20px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-footer{
-background:#222;
-color:#fff;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-
-@media(max-width:768px){
-
-header h1{
-font-size:24px;
-}
-
-nav{
-flex-direction:column;
-align-items:center;
-}
-
-.hero h2{
-font-size:24px;
-}
-
-.btn{
-display:block;
-margin:10px auto;
-width:90%;
-text-align:center;
-}
-
-}
-.notice{
-    background:#fff3cd;
-    color:#b00020;
-    padding:12px;
-    font-weight:bold;
-    border-top:2px solid #d6001c;
-    border-bottom:2px solid #d6001c;
-}
-.slider{
-    width:100%;
-    overflow:hidden;
-    border-radius:10px;
-    margin-bottom:20px;
-}
-
-.slider img{
-    width:100%;
-    height:400px;
-    object-fit:cover;
-    border-radius:10px;
-}
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
 }
 
-
-.card{
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:10px;
-}
-
-table th,
-table td{
-padding:12px;
-border:1px solid #ddd;
-text-align:left;
-}
-
-table tr:nth-child(even){
-background:#f8f8f8;
-}
-
-.notice{
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.hero img,
-.slider img{
-transition:.5s;
-}
-
-.hero img:hover,
-.slider img:hover{
-transform:scale(1.02);
-}
-
-footer{
-font-size:15px;
-}
-
-.card h2{
-border-left:5px solid #d6001c;
-padding-left:10px;
-}
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#d6001c;
-border-radius:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#eee;
-}
-.footer-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-text-align:left;
-}
-
-footer{
-background:#111;
-color:white;
-padding:40px 20px;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-}
-
-footer a:hover{
-color:#ffcccb;
-}
-
-footer h3{
-margin-bottom:10px;
-color:#fff;
-}
-
-footer hr{
-margin:20px 0;
-border:1px solid rgba(255,255,255,.2);
-}
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:20px;
-}
-
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-cursor:pointer;
-transition:0.4s;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-    }
-.header-box{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    text-align:center;
-}
-
-.logo{
-    width:90px;
-    height:90px;
-    background:#fff;
-    border-radius:50%;
-    padding:8px;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
-}
-
-.header-text h1{
-    font-size:32px;
-    margin-bottom:5px;
-    color:#fff;
-}
-
-.header-text p{
-    font-size:18px;
-    color:#fff;
-}
-
-@media(max-width:768px){
-
-.logo{
-    width:70px;
-    height:70px;
-}
-
-.header-text h1{
-    font-size:22px;
-}
-
-.header-text p{
-    font-size:15px;
-}
-
-}
-/* ===== Header ===== */
+/* ================= Header ================= */
 
 header{
-    background:#d6001c;
+    background:linear-gradient(135deg,#d6001c,#b40018);
     color:#fff;
     padding:25px 15px;
     text-align:center;
@@ -371,14 +47,25 @@ header{
 
 .header-text h1{
     font-size:32px;
-    margin-bottom:6px;
+    margin-bottom:5px;
 }
 
 .header-text p{
     font-size:18px;
 }
 
-/* ===== Navigation ===== */
+/* ================= Notice ================= */
+
+.notice{
+    background:#fff3cd;
+    color:#b00020;
+    padding:12px;
+    font-weight:bold;
+    border-top:2px solid #d6001c;
+    border-bottom:2px solid #d6001c;
+}
+
+/* ================= Navigation ================= */
 
 nav{
     background:#fff;
@@ -389,8 +76,8 @@ nav{
     padding:12px;
     position:sticky;
     top:0;
-    z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    z-index:999;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 
 nav a{
@@ -407,33 +94,27 @@ nav a:hover{
     color:#fff;
 }
 
-/* ===== Notice ===== */
-
-.notice{
-    background:#fff3cd;
-    color:#b00020;
-    padding:12px;
-    font-weight:bold;
-    border-top:2px solid #d6001c;
-    border-bottom:2px solid #d6001c;
-}
-
-/* ===== Hero ===== */
+/* ================= Hero ================= */
 
 .hero{
     width:90%;
     max-width:1100px;
-    margin:20px auto;
+    margin:25px auto;
     background:#fff;
     border-radius:15px;
     padding:20px;
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.slider{
+    overflow:hidden;
+    border-radius:12px;
 }
 
 .slider img{
     width:100%;
-    height:420px;
+    height:430px;
     object-fit:cover;
     border-radius:12px;
     transition:.5s;
@@ -445,10 +126,15 @@ nav a:hover{
 
 .hero h2{
     color:#d6001c;
-    margin:20px 0 10px;
+    margin-top:20px;
 }
 
-/* ===== Button ===== */
+.hero p{
+    margin-top:8px;
+    color:#666;
+}
+
+/* ================= Button ================= */
 
 .btn{
     display:inline-block;
@@ -465,30 +151,42 @@ nav a:hover{
     background:#a30016;
 }
 
-/* ===== Card ===== */
+/* ================= Container ================= */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ================= Card ================= */
 
 .card{
     background:#fff;
-    padding:20px;
     margin-bottom:20px;
+    padding:20px;
     border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
 }
 
 .card h2{
     color:#d6001c;
+    margin-bottom:15px;
     border-left:5px solid #d6001c;
     padding-left:10px;
-    margin-bottom:15px;
 }
 
-/* ===== Gallery ===== */
+.card ul{
+    padding-left:20px;
+}
+
+/* ================= Gallery ================= */
 
 .gallery{
     display:grid;
@@ -501,8 +199,8 @@ nav a:hover{
     height:250px;
     object-fit:cover;
     border-radius:12px;
-    transition:.4s;
     cursor:pointer;
+    transition:.4s;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
@@ -510,7 +208,7 @@ nav a:hover{
     transform:scale(1.05);
 }
 
-/* ===== Table ===== */
+/* ================= Table ================= */
 
 table{
     width:100%;
@@ -519,25 +217,26 @@ table{
 
 table th{
     background:#d6001c;
-    color:#fff;
+    color:white;
 }
 
 table th,
 table td{
-    padding:12px;
     border:1px solid #ddd;
+    padding:12px;
 }
 
 table tr:nth-child(even){
-    background:#f7f7f7;
+    background:#f8f8f8;
 }
 
-/* ===== Footer ===== */
+/* ================= Footer ================= */
 
 footer{
     background:#111;
-    color:#fff;
+    color:white;
     padding:40px 20px;
+    margin-top:30px;
 }
 
 .footer-container{
@@ -551,7 +250,7 @@ footer h3{
 }
 
 footer a{
-    color:#fff;
+    color:white;
     text-decoration:none;
 }
 
@@ -564,7 +263,7 @@ footer hr{
     border:1px solid rgba(255,255,255,.2);
 }
 
-/* ===== Scrollbar ===== */
+/* ================= Scrollbar ================= */
 
 ::-webkit-scrollbar{
     width:8px;
@@ -575,9 +274,17 @@ footer hr{
     border-radius:10px;
 }
 
-/* ===== Responsive ===== */
+::-webkit-scrollbar-track{
+    background:#eee;
+}
+
+/* ================= Responsive ================= */
 
 @media(max-width:768px){
+
+.header-box{
+    flex-direction:column;
+}
 
 .logo{
     width:70px;
@@ -607,4 +314,4 @@ nav{
     margin:10px auto;
 }
 
-}
+    }
