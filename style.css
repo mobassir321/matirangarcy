@@ -298,3 +298,48 @@ box-shadow:0 5px 15px rgba(0,0,0,.15);
 transform:scale(1.05);
 box-shadow:0 10px 25px rgba(0,0,0,.3);
     }
+.header-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    background:#fff;
+    border-radius:50%;
+    padding:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.header-text h1{
+    font-size:32px;
+    margin-bottom:5px;
+    color:#fff;
+}
+
+.header-text p{
+    font-size:18px;
+    color:#fff;
+}
+
+@media(max-width:768px){
+
+.logo{
+    width:70px;
+    height:70px;
+}
+
+.header-text h1{
+    font-size:22px;
+}
+
+.header-text p{
+    font-size:15px;
+}
+
+}
