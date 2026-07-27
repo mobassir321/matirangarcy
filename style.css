@@ -17,6 +17,7 @@ body {
     background: #f4f7fb;
     color: #333;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -58,6 +59,7 @@ header {
 .header-text h1 {
     font-size: 32px;
     margin-bottom: 5px;
+    letter-spacing: 0.5px;
 }
 
 .header-text p {
@@ -98,10 +100,12 @@ nav {
 #navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
     padding: 12px;
     background: #fff;
+    transition: background-color 0.3s ease;
 }
 
 #navbar a {
@@ -119,6 +123,24 @@ nav {
     color: #fff;
 }
 
+/* Theme Toggle Button Style */
+.theme-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+
+.theme-btn:hover {
+    background: #555;
+}
+
 /* ================= Hero ================= */
 
 .hero {
@@ -130,6 +152,7 @@ nav {
     padding: 20px;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: background 0.3s ease;
 }
 
 .slider {
@@ -152,6 +175,7 @@ nav {
 .hero h2 {
     color: #d6001c;
     margin-top: 20px;
+    letter-spacing: 0.5px;
 }
 
 .hero p {
@@ -187,19 +211,19 @@ nav {
 }
 
 .card {
-    background: #fff;
+    background: #ffffff;
     margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 16px;
     border-left: 4px solid #d6001c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     animation: fadeUp 0.8s ease;
-    transition: 0.3s;
+    transition: all 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(214, 0, 28, 0.12);
 }
 
 .card h2 {
@@ -266,6 +290,31 @@ table td {
 
 table tr:nth-child(even) {
     background: #f8f8f8;
+}
+
+/* ================= Floating Call/WhatsApp ================= */
+
+.floating-call {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.floating-call:hover {
+    transform: scale(1.1);
 }
 
 /* ================= Back To Top Button ================= */
@@ -345,6 +394,50 @@ footer hr {
     background: #eee;
 }
 
+/* ================= Dark Mode Styles ================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .hero,
+body.dark-mode .card,
+body.dark-mode #navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .notice {
+    background-color: #2c2512;
+    color: #ffda6a;
+}
+
+body.dark-mode .hero p,
+body.dark-mode .card p,
+body.dark-mode .card ul li {
+    color: #ccc;
+}
+
+body.dark-mode table td {
+    border-color: #333;
+    color: #eee;
+}
+
+body.dark-mode table tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .theme-btn {
+    background: #f4f7fb;
+    color: #333;
+}
+
+body.dark-mode .theme-btn:hover {
+    background: #ddd;
+}
+
 /* ================= Responsive (Mobile / Tablet) ================= */
 
 @media (max-width: 768px) {
@@ -365,7 +458,6 @@ footer hr {
         font-size: 15px;
     }
 
-    /* Mobile Navbar Styling */
     nav {
         background: #d6001c;
     }
@@ -382,6 +474,10 @@ footer hr {
         padding: 0;
     }
 
+    body.dark-mode #navbar {
+        background: #1e1e1e;
+    }
+
     #navbar.active {
         display: flex;
     }
@@ -392,12 +488,23 @@ footer hr {
         padding: 15px;
         text-align: center;
         border-radius: 0;
+        width: 100%;
+    }
+
+    body.dark-mode #navbar a {
+        color: #eee;
+        border-bottom: 1px solid #333;
     }
 
     #navbar a:hover,
     #navbar a.active {
         background: #d6001c;
         color: #fff;
+    }
+
+    .theme-btn {
+        width: 90%;
+        margin: 10px auto;
     }
 
     .slider img {
@@ -409,100 +516,4 @@ footer hr {
         width: 90%;
         margin: 10px auto;
     }
-}
-/* ===== Glassmorphism & Soft Shadows for Cards ===== */
-.card {
-    background: #ffffff;
-    border: 1px solid rgba(214, 0, 28, 0.08);
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(214, 0, 28, 0.12);
-}
-
-/* ===== Modern Gradient Text for Headings ===== */
-.header-text h1, .hero h2 {
-    letter-spacing: 0.5px;
-}
-
-/* ===== Floating Quick Contact Button ===== */
-.floating-call {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #25d366; /* WhatsApp Green or Red #d6001c */
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    text-decoration: none;
-    z-index: 999;
-    transition: 0.3s;
-}
-
-.floating-call:hover {
-    transform: scale(1.1);
    }
-/* ================= Dark Mode Styles ================= */
-
-/* ডার্ক মোড অন হলে পুরো বডি ও কার্ডের রঙ বদলে যাবে */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-mode .hero,
-body.dark-mode .card,
-body.dark-mode #navbar {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-body.dark-mode .hero p,
-body.dark-mode .card p,
-body.dark-mode .card ul li {
-    color: #ccc;
-}
-
-body.dark-mode table td {
-    border-color: #333;
-    color: #eee;
-}
-
-body.dark-mode table tr:nth-child(even) {
-    background-color: #2a2a2a;
-}
-
-/* Theme Toggle Button Style */
-.theme-btn {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-    margin-left: 5px;
-}
-
-.theme-btn:hover {
-    background: #555;
-}
-
-body.dark-mode .theme-btn {
-    background: #f4f7fb;
-    color: #333;
-}
