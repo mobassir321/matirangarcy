@@ -320,5 +320,94 @@ nav a{
     width:90%;
     margin:10px auto;
 }
+  
 
     }
+/* ===== Active Navigation ===== */
+nav a.active{
+    background:#d6001c;
+    color:#fff;
+}
+
+/* ===== Button Shadow ===== */
+.btn{
+    box-shadow:0 6px 15px rgba(214,0,28,.35);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ===== Card Border ===== */
+.card{
+    border-left:4px solid #d6001c;
+}
+
+/* ===== Card Animation ===== */
+.card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== Hero Gradient ===== */
+.hero{
+    background:linear-gradient(180deg,#ffffff,#fff8f8);
+}
+
+/* ===== Gallery Hover ===== */
+.gallery img:hover{
+    transform:scale(1.05) rotate(.5deg);
+}
+
+/* ===== Smooth Image ===== */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* ===== Selection Color ===== */
+::selection{
+    background:#d6001c;
+    color:#fff;
+}
+
+/* ===== Footer Icons ===== */
+footer p{
+    margin:8px 0;
+}
+
+/* ===== Back To Top Button ===== */
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    display:none;
+    background:#d6001c;
+    color:#fff;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#topBtn:hover{
+    background:#a30016;
+}
+
+/* ===== Mobile Scroll ===== */
+nav::-webkit-scrollbar{
+    display:none;
+}
