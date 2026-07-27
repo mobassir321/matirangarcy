@@ -60,3 +60,13 @@ if (topBtn) {
         });
     });
 }
+// ===== Hamburger Menu =====
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+if(menuToggle){
+    menuToggle.addEventListener("click", function(){
+        navbar.classList.toggle("active");
+    });
+}
