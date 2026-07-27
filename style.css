@@ -470,36 +470,44 @@ body.dark-mode .theme-btn:hover {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: #fff;
+        background: #d6001c; /* মোবাইল লাল ব্যাকগ্রাউন্ড */
         padding: 0;
-    }
-
-    body.dark-mode #navbar {
-        background: #1e1e1e;
     }
 
     #navbar.active {
         display: flex;
     }
 
+    /* মোবাইল ভিউতে মেনু টেক্সট কালার সমাধান */
     #navbar a {
-        color: #333;
-        border-bottom: 1px solid #eee;
+        color: #ffffff !important; /* স্পষ্ট সাদা টেক্সট */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding: 15px;
         text-align: center;
         border-radius: 0;
         width: 100%;
     }
 
+    #navbar a:hover,
+    #navbar a.active {
+        background: #a30016;
+        color: #ffffff !important;
+    }
+
+    /* ডার্ক মোডে মোবাইল মেনু */
+    body.dark-mode #navbar {
+        background: #1e1e1e;
+    }
+
     body.dark-mode #navbar a {
-        color: #eee;
+        color: #eee !important;
         border-bottom: 1px solid #333;
     }
 
-    #navbar a:hover,
-    #navbar a.active {
+    body.dark-mode #navbar a:hover,
+    body.dark-mode #navbar a.active {
         background: #d6001c;
-        color: #fff;
+        color: #fff !important;
     }
 
     .theme-btn {
@@ -516,4 +524,4 @@ body.dark-mode .theme-btn:hover {
         width: 90%;
         margin: 10px auto;
     }
-   }
+}
