@@ -85,3 +85,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// Number Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('.card strong');
+    counters.forEach(counter => {
+        const valueText = counter.innerText;
+        const target = parseInt(valueText.replace(/[^0-9]/g, ''));
+        if (!isNaN(target) && !counter.classList.contains('counted')) {
+            let count = 0;
+            const speed = target / 50; // Speed of counting
+            const updateCount = () => {
+                count += speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count) + "+";
+                    setTimeout(updateCount, 30);
+                } else {
+                    counter.innerText = target + "+";
+                    counter.classList.add('counted');
+                }
+            };
+            updateCount();
+        }
+    });
+}
+
+// Trigger counter when scrolled to section
+window.addEventListener('scroll', function() {
+    const statsCard = document.querySelector('.card');
+    if (statsCard) {
+        const cardPosition = statsCard.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight;
+        if (cardPosition < screenPosition) {
+            animateCounters();
+        }
+    }
+});
