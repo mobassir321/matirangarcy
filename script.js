@@ -28,7 +28,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ===========================
-    // 3. Smooth Image Slider
+    // 3. Dark Mode Toggle
+    // ===========================
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+
+    // পূর্বের সেভ হওয়া থিম চেক
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        if (themeToggleBtn) themeToggleBtn.innerText = "☀️ লাইট মোড";
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+
+            let theme = "light";
+            if (document.body.classList.contains("dark-mode")) {
+                theme = "dark";
+                themeToggleBtn.innerText = "☀️ লাইট মোড";
+            } else {
+                themeToggleBtn.innerText = "🌙 ডার্ক মোড";
+            }
+
+            localStorage.setItem("theme", theme);
+        });
+    }
+
+    // ===========================
+    // 4. Smooth Image Slider
     // ===========================
     const images = [
         "images/IMG-20260710-WA0165.jpg",
@@ -47,23 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
 
     if (slider && images.length > 0) {
-        // Smooth Fade Effect Transition
         slider.style.transition = "opacity 0.5s ease-in-out";
 
         setInterval(() => {
-            slider.style.opacity = "0.3"; // কিছুটা ঝাপসা হয়ে ছবি পরিবর্তন হবে
+            slider.style.opacity = "0.3";
 
             setTimeout(() => {
                 current = (current + 1) % images.length;
                 slider.src = images[current];
-                slider.style.opacity = "1"; // আবার আগের স্পষ্ট অবস্থায় ফিরবে
+                slider.style.opacity = "1";
             }, 500);
 
         }, 3500);
     }
 
     // ===========================
-    // 4. Back To Top Button
+    // 5. Back To Top Button
     // ===========================
     const topBtn = document.getElementById("topBtn");
 
@@ -85,7 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-// Number Counter Animation
+
+// ===========================
+// 6. Number Counter Animation
+// ===========================
 function animateCounters() {
     const counters = document.querySelectorAll('.card strong');
     counters.forEach(counter => {
@@ -93,7 +123,7 @@ function animateCounters() {
         const target = parseInt(valueText.replace(/[^0-9]/g, ''));
         if (!isNaN(target) && !counter.classList.contains('counted')) {
             let count = 0;
-            const speed = target / 50; // Speed of counting
+            const speed = target / 50;
             const updateCount = () => {
                 count += speed;
                 if (count < target) {
@@ -109,7 +139,7 @@ function animateCounters() {
     });
 }
 
-// Trigger counter when scrolled to section
+// স্ক্রলে সেকশনটি আসলে কাউন্টার রান হবে
 window.addEventListener('scroll', function() {
     const statsCard = document.querySelector('.card');
     if (statsCard) {
