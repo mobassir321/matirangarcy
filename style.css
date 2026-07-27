@@ -453,3 +453,56 @@ footer hr {
 .floating-call:hover {
     transform: scale(1.1);
    }
+/* ================= Dark Mode Styles ================= */
+
+/* ডার্ক মোড অন হলে পুরো বডি ও কার্ডের রঙ বদলে যাবে */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .hero,
+body.dark-mode .card,
+body.dark-mode #navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .hero p,
+body.dark-mode .card p,
+body.dark-mode .card ul li {
+    color: #ccc;
+}
+
+body.dark-mode table td {
+    border-color: #333;
+    color: #eee;
+}
+
+body.dark-mode table tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+/* Theme Toggle Button Style */
+.theme-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+
+.theme-btn:hover {
+    background: #555;
+}
+
+body.dark-mode .theme-btn {
+    background: #f4f7fb;
+    color: #333;
+}
