@@ -411,3 +411,39 @@ footer p{
 nav::-webkit-scrollbar{
     display:none;
 }
+/* ===== Hamburger Menu ===== */
+
+.menu-toggle{
+    display:none;
+    background:#d6001c;
+    color:#fff;
+    font-size:30px;
+    padding:12px;
+    text-align:center;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+    display:block;
+}
+
+nav{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#fff;
+}
+
+nav.active{
+    display:flex;
+}
+
+nav a{
+    border-bottom:1px solid #eee;
+    padding:15px;
+    text-align:center;
+}
+
+}
